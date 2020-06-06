@@ -10,9 +10,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {DemoApplication.class})
+
 public class TestUserDao {
+    private static Logger logger = LoggerFactory.getLogger(TestUserDao.class);
+
     @Autowired
     private UserDao userDao;
 
@@ -22,5 +28,6 @@ public class TestUserDao {
         for (User user : all) {
             System.out.println(user);
         }
+        logger.warn("fuck");
     }
 }
