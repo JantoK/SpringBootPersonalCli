@@ -24,7 +24,7 @@ public class TestUserDao {
 
     @Test
     public void test() {
-        List<User> all = userDao.findAll();
+        List<User> all = userDao.findAllUser();
         for (User user : all) {
             System.out.println(user);
         }

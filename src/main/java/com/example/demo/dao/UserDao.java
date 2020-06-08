@@ -7,5 +7,11 @@ import java.util.List;
 
 @Service
 public interface UserDao {
-    List<User> findAll();
+    List<User> findAllUser();
+
+    int insertUser(User user);
+
+    int updateUser(User user);
+
+    int deleteUser(Integer id);
 }
